@@ -1,0 +1,42 @@
+﻿<UserControl x:Class="KPO_2.RoundClock"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:KPO_2"
+             mc:Ignorable="d" 
+             d:DesignHeight="250" d:DesignWidth="250">
+
+    <Grid Background="Wheat">
+
+        <Line x:Name="Hour" Y2="-60" Stroke="Black" HorizontalAlignment="Center" VerticalAlignment="Center" Height="1" RenderTransformOrigin=".5,.5">
+            <Line.RenderTransform>
+                <RotateTransform Angle="{Binding Path=HourAngle, Mode=TwoWay}"/>
+            </Line.RenderTransform>
+        </Line>
+        <Line x:Name="Minute" Y2="-70" Stroke="Black" HorizontalAlignment="Center" VerticalAlignment="Center" Height="1" RenderTransformOrigin=".5,.5" StrokeThickness="1">
+            <Line.RenderTransform>
+                <RotateTransform Angle="{Binding Path=MinAngle, Mode=TwoWay}"/>
+            </Line.RenderTransform>
+        </Line>
+        <Line x:Name="Second" Y2="-80" Stroke="Black" HorizontalAlignment="Center" VerticalAlignment="Center" Height="1" RenderTransformOrigin=".5,.5" StrokeThickness="2">
+            <Line.RenderTransform>
+                <RotateTransform Angle="{Binding Path=SecAngle, Mode=TwoWay}"/>
+            </Line.RenderTransform>
+        </Line>
+        <Rectangle Height="250" Width="250" RenderTransformOrigin="0.5,0.4" x:Name="Container" >
+        </Rectangle>
+        <Label Content="12" Margin="112,8,112,217"/>
+        <Label Content="11" Margin="63,26,163,200"/>
+        <Label Content="10" Margin="25,64,201,161"/>
+        <Label Content="9" Margin="15,112,215,112"/>
+        <Label Content="8" Margin="29,162,201,62"/>
+        <Label Content="7" Margin="63,196,169,28"/>
+        <Label Content="6" Margin="116,210,116,14"/>
+        <Label Content="5" Margin="170,197,62,28"/>
+        <Label Content="4" Margin="206,162,26,62"/>
+        <Label Content="3" Margin="216,112,15,112"/>
+        <Label Content="2" Margin="206,64,24,162"/>
+        <Label Content="1" Margin="170,26,60,200"/>
+    </Grid>
+</UserControl>

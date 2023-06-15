@@ -1,0 +1,15 @@
+﻿<UserControl x:Class="KPO_2.test1"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:KPO_2"
+             mc:Ignorable="d" 
+             d:DesignHeight="200" d:DesignWidth="90">
+    <Grid Background="White">
+        <Path Stroke="Black" StrokeThickness="2" StrokeStartLineCap="Round" StrokeEndLineCap="Round" 
+              Data="
+              M 5 8 L 5 98 M 85 8 L 85 97 M 85 103 L 85 189 M 8 100 L 83 100 
+              "/>
+    </Grid>
+</UserControl>

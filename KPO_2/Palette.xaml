@@ -1,0 +1,44 @@
+﻿<UserControl x:Class="KPO_2.Palette"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:KPO_2"
+             mc:Ignorable="d" 
+             d:DesignHeight="120" d:DesignWidth="220">
+
+
+
+    <Grid Background="White">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="120"/>
+            <ColumnDefinition Width="100"/>
+        </Grid.ColumnDefinitions>
+        <StackPanel Grid.Column="0" Orientation="Vertical" Width="100">
+
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Right">
+                <Label Content="Red:" FontSize="13"/>
+                <local:NumerableBox Text="{Binding R, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" x:Name ="RedValue" Width="40" Height="20"/>
+            </StackPanel>
+
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Right">
+                <Label Content="Green:" FontSize="13"/>
+                <local:NumerableBox Text="{Binding G, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" x:Name="GreenValue" Width="40" Height="20"/>
+            </StackPanel>
+
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Right">
+                <Label Content="Blue:" FontSize="13"/>
+                <local:NumerableBox Text="{Binding B, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" x:Name="BlueValue"  Width="40" Height="20"/>
+            </StackPanel>
+
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Right">
+                <Label Content="HEX:" FontSize="13"/>
+                <local:HexBox Text="{Binding Hex, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" x:Name="HexValue" Width="70" Height="20"/>
+            </StackPanel>
+
+        </StackPanel>
+
+        <Border x:Name="ColorVisualiser" Background="{Binding SelectedColor}" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="2,0,0,0" Grid.Column="1" BorderBrush="Black" BorderThickness="0" Width="91" Height="95"/>
+
+    </Grid>
+</UserControl>

@@ -1,0 +1,57 @@
+﻿<UserControl x:Class="KPO_2.AnotherClock"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:KPO_2"
+             mc:Ignorable="d" 
+             d:DesignHeight="251" d:DesignWidth="610">
+    <Grid Background="White">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="1"></RowDefinition>
+            <RowDefinition Height="200"></RowDefinition>
+            <RowDefinition Height="50"></RowDefinition>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="10"></ColumnDefinition>
+            <ColumnDefinition Width="90"></ColumnDefinition>
+            <ColumnDefinition Width="10"></ColumnDefinition>
+            <ColumnDefinition Width="90"></ColumnDefinition>
+            <ColumnDefinition Width="10"></ColumnDefinition>
+            <ColumnDefinition Width="90"></ColumnDefinition>
+            <ColumnDefinition Width="10"></ColumnDefinition>
+            <ColumnDefinition Width="90"></ColumnDefinition>
+            <ColumnDefinition Width="10"></ColumnDefinition>
+            <ColumnDefinition Width="90"></ColumnDefinition>
+            <ColumnDefinition Width="10"></ColumnDefinition>
+            <ColumnDefinition Width="90"></ColumnDefinition>
+            <ColumnDefinition Width="10"></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+        <Rectangle Grid.Row="1" Grid.Column="1" Stroke="Black">
+            
+        </Rectangle>
+        <Rectangle Grid.Row="1" Grid.Column="3" Stroke="Black">
+            
+        </Rectangle>
+        <Rectangle Grid.Row="1" Grid.Column="5" Stroke="Black">
+            
+        </Rectangle>
+        <Rectangle Grid.Row="1" Grid.Column="7" Stroke="Black">
+            
+        </Rectangle>
+        <Rectangle Grid.Row="1" Grid.Column="9" Stroke="Black">
+        </Rectangle>
+        <Rectangle Grid.Row="1" Grid.Column="11" Stroke="Black">
+            
+        </Rectangle>
+        <Path Grid.Row="1" Grid.Column="11" StrokeEndLineCap="Round" StrokeStartLineCap="Round" Stroke="Green" StrokeThickness="3" Height="200" Width="90" Data="{Binding SecondTwo}"></Path>
+        <Path Grid.Row="1" Grid.Column="9"  StrokeEndLineCap="Round" StrokeStartLineCap="Round" Stroke="Green" StrokeThickness="3" Height="200" Width="90" Data="{Binding SecondOne}"></Path>
+        <Path Grid.Row="1" Grid.Column="7"  StrokeEndLineCap="Round" StrokeStartLineCap="Round" Stroke="Green" StrokeThickness="3" Height="200" Width="90" Data="{Binding MinuteTwo}"></Path>
+        <Path Grid.Row="1" Grid.Column="5"  StrokeEndLineCap="Round" StrokeStartLineCap="Round" Stroke="Green" StrokeThickness="3" Height="200" Width="90" Data="{Binding MinuteOne}"></Path>
+        <Path Grid.Row="1" Grid.Column="3"  StrokeEndLineCap="Round" StrokeStartLineCap="Round" Stroke="Green" StrokeThickness="3" Height="200" Width="90" Data="{Binding HourTwo}"></Path>
+        <Path Grid.Row="1" Grid.Column="1"  StrokeEndLineCap="Round" StrokeStartLineCap="Round" Stroke="Green" StrokeThickness="3" Height="200" Width="90" Data="{Binding HourOne}"></Path>
+        <Label Content="Hours" Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="4" VerticalAlignment="Center" HorizontalAlignment="Center"></Label>
+        <Label Content="Minutes" Grid.Row="2" Grid.Column="5" Grid.ColumnSpan="3" VerticalAlignment="Center" HorizontalAlignment="Center"></Label>
+        <Label Content="Seconds" Grid.Row="2" Grid.Column="9" Grid.ColumnSpan="3" VerticalAlignment="Center" HorizontalAlignment="Center"></Label>
+    </Grid>
+</UserControl>

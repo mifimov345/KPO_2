@@ -1,0 +1,31 @@
+﻿<Window x:Class="KPO_2.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:KPO_2"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="800" Width="1200">
+
+    <Window.Resources>
+        <local:Palette x:Key="Palette"/>
+        <local:RoundClock x:Key="RoundClock"/>
+        <local:AnotherClock x:Key="AnotherClock"/>
+    </Window.Resources>
+
+
+    <Grid>
+        <Viewbox>
+            <local:AnotherClock DataContext="{StaticResource AnotherClock}" Margin="100,400,320,60" HorizontalAlignment="Stretch" VerticalAlignment="Stretch"/>
+        </Viewbox>
+        <Viewbox>
+            <local:Palette Margin="0,0,500,390" DataContext="{StaticResource Palette}" Grid.RowSpan="2" HorizontalAlignment="Stretch" VerticalAlignment="Stretch"/>
+        </Viewbox>
+        
+        <Viewbox Stretch="Uniform">
+            <local:RoundClock DataContext="{StaticResource RoundClock}" Margin="400,-200,400,0"/>
+        </Viewbox>
+        
+
+    </Grid>
+</Window>
